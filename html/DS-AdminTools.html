@@ -1,0 +1,28 @@
+<!-- Admin Tools (Ctrl + Shift + a) to show. -->
+<div class="btn-toolbar userSim flex-nowrap" role="toolbar" aria-label="Toolbar with button groups">
+	<div class="btn-group me-2 shadow" role="group" aria-label="First group">
+		<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
+		<label class="btn shadow op1 tt at3 at2 oBor btn-outline-info" for="option1" title="Full Access" onClick="setLevel(1);"> <i class="fas fa-user-shield"></i></label>
+		<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off"> 
+		<label class="btn shadow op2 tt at3 oBor btn-outline-info" for="option2" title="Be the Boss" onClick="setLevel(2);"><i class="fas fa-user-tie"></i></label>
+		<input type="radio" class="btn-check" name="options" id="option3" autocomplete="off"> 
+		<label class="btn shadow op3 tt oBor btn-outline-info" for="option3" title="Manage Users" onClick="setLevel(3);"><i class="fas fa-users"></i></label>
+		<input type="radio" class="btn-check" name="options" id="option4" autocomplete="off"> 
+		<label class="btn shadow op4 tt oBor btn-outline-info" for="option4" title="Delete Records" onClick="setLevel(4);"><i class="fas fa-user-times"></i></label>
+		<input type="radio" class="btn-check" name="options" id="option5" autocomplete="off"> 
+		<label class="btn shadow op5 tt oBor btn-outline-info" for="option5" title="Edit Records" onClick="setLevel(5);"><i class="fas fa-user-edit"></i></label>
+		<input type="radio" class="btn-check" name="options" id="option6" autocomplete="off"> 
+		<label class="btn shadow op6 tt oBor btn-outline-info" for="option6" title="Create New Records" onClick="setLevel(6);"><i class="fas fa-user-plus"></i></label>
+		<input type="radio" class="btn-check" name="options" id="option7" autocomplete="off"> 
+		<label class="btn shadow op7 tt oBor btn-outline-info" for="option7" title="Read Only" onClick="setLevel(7);"><i class="fas fa-book-reader"></i></label>
+	</div>
+	<div class="btn-group me-2 shadow" role="group" aria-label="Second group">
+		<button type="button" class="btn shadow tt adminLock" title="Disable Tags"><i class="fas fa-user-check"></i></button>
+		<button type="button" class="btn shadow tt ExTog" title="Export Selection to Excel or CSV"><i class="fas fa-external-link-alt"></i></button>
+		<button type="button" class="btn shadow tt sideBarLTog" title="Datasafe Settings" ><i class="fas fa-exchange-alt"></i></button>
+		<button type="button" class="btn shadow tt at2 at3 Store" id="adminer" title="Backend DataStore, Warning!"><i class="fas fa-database"></i></button>
+	</div>
+	<div class="btn-group shadow me-3" role="group" aria-label="Third group">
+		<button type="button" class="btn-sm shadow tt" title="Close" onClick="location.reload(true);"><i class="fas fa-sync-alt"></i></button>
+	</div>
+</div>

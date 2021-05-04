@@ -1,0 +1,32 @@
+<!-- Bottom Navigation -->
+<nav class="navbar fixed-bottom shadow-lg d-flex justify-content-around">
+    <div class="hide pl-2 pr-2 userLevel"> User Level </div>
+    <!-- Pagination Controls -->
+    <div class="row flex-nowrap me-5 ms-4">
+        <div class="col-xs-12 ps-col">
+            <div id="#pgnId" class="pagination">
+                <a id="first" type="button" class="btn-lg totsBtns align-self-center first" data-action="first"><i class="fas fa-angle-double-left"></i></a>
+                <a id="prev" type="button" class="btn-lg totsBtns align-self-center previous" data-action="previous"><i class="fas fa-angle-left"></i></a>
+                <input id="pageInfoBox" autocomplete="off" class="btn form-control align-self-center shadow border-light text-center tots tt" title="Goto Page Number" type="text" readonly />
+                <a id="next" type="button" class="btn-lg totsBtns align-self-center next" data-action="next"><i class="fas fa-angle-right"></i></a>
+                <a id="last" type="button" class="btn-lg totsBtns align-self-center last" data-action="last"><i class="fas fa-angle-double-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Records control buttons -->
+    <div class="row flex-nowrap">
+        <div class="col-xs-12 ps-col">
+            <button id="new_record" type="button" class="ms-lg-3 btn shadow u"><i class="far fa-plus-square"></i></button>
+            <button onclick="bDisabledFormElements()" id="edit_record" type="button" class="me-lg-4 btn shadow u"><i class="far fa-edit"></i></button>
+            <button id="copy_record" type="button" class="me-lg-4 btn shadow u"><i class="far fa-copy"></i></button>
+            <button id="insert_record" type="button" class="me-lg-3 btn shadow u" style="display:none;"><i class="far fa-thumbs-up"></i></button>
+            <button id="update_record" type="button" class="me-lg-3 btn shadow u" style="display:none;"><i class="far fa-thumbs-up"></i></button>
+            <button id="cancel_record" type="button" class="me-lg-3 btn shadow" style="display:none;"><i class="far fa-thumbs-down"></i></button>
+            <button id="delete_record" type="button" class="me-lg-4 btn-sm shadow u" disabled><i class="far fa-trash-alt"></i></button>
+            <button type="button" class="ms-sm-4 prevtab btn shadow ms-auto"><i class="far fa-hand-point-left"></i></button>
+            <button type="button" class="nexttab btn shadow"><i class="far fa-hand-point-right"></i></button>
+            <!-- <button type="button" class="ms-sm-4 btn shadow tt listTog" title="List View" onClick="$('#list').modal('show')"><i class="fas fa-table"></i></button> -->
+            <button type="button" class="ms-sm-4 btn shadow tt" title="List View" data-bs-toggle="modal" data-bs-target="#list"><i class="fas fa-table"></i></button>
+        </div>
+    </div>
+</nav>

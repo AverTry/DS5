@@ -1,0 +1,90 @@
+<nav class="navbar navbar-expand-md shadow-lg fixed-top">
+  <a class="navbar-brand" href="/"><span class="badge badgeHead shadow" id="DSversion">DATASAFE 5.014</span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse flex-row justify-content-between" id="navbarsExampleDefault">
+    <include DS-Template="./html/DS-AdminTools.html"></include>
+    <div class="input-group flex-nowrap" style="max-width: 40rem;">
+      <!-- <div class="input-group flex-nowrap w-auto"> -->
+      <button type="button" class="btn btn-outline-secondary" title="Last Query Toggle" id="qToggle"><i class="fas fa-filter"></i></button>
+      <input tabindex="0" class="form-control pl-2 shrink relative" autocomplete="off" id="Search" type="search" placeholder="MongoDB Search" style="display: flex; min-width: fit-content;">
+      <div class="container" id="searchLabelType" style="display: none;">
+        <h6 class="text-center mb-1 searchTypeInfo">Searching ( ALL ) By [ Text ]</h6>
+      </div>
+      <div class="input-group flex-nowrap" id="searchOptions" style="display: none; min-width: fit-content;">
+        <label class="input-group-text" for="searchYear">Y</label>
+        <select class="form-select" id="searchYear"></select>
+        <label class="input-group-text" for="searchMonth">M</label>
+        <select class="form-select" id="searchMonth"></select>
+        <label class="input-group-text" for="searchDay">W</label>
+        <select class="form-select" id="searchWeek"></select>
+        <label class="input-group-text" for="searchDay">D</label>
+        <select class="form-select" id="searchDay"></select>
+      </div>
+      <div class="input-group" id="searchRange" style="display: none; min-width: fit-content;">
+        <input id="fromDate" type="date" min="2000-01-01" max="2050-12-31" class="form-control pr-4"></input>
+        <label class="input-group-text">To</label>
+        <input id="toDate" type="date" min="2000-01-01" max="2050-12-31" class="form-control pr-4"></input>
+      </div>
+      <button type="button" class="btn btn-outline-secondary" title="Search by Query" id="searchBtn"><i class="fas fa-search"></i></button>
+      <div class="dropdown" id="myInp">
+        <button type="button" class="btn btn-outline-secondary" title="Advanced Search & Sort" id="advDrop" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+        <div class="dropdown-menu dropdown-menu-end dropdown-menu-dark" id="myD">
+          <div style="width: 30rem;">
+            <h6 class="dropdown-header">Individual Field Search & Field Sorting</h6>
+            <div class="row flex-row px-4 pt-3">
+              <div class="col-6 form-group navGroup" style="position: relative">
+                <label for="srcField">Search By :&nbsp;</label>
+                <select disabled id="srcField" class="form-control pr-4">
+                  <option value="Choose...">Choose...</option>
+                </select>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" style="position: absolute; right: 12px; top: 38px" id="searchByBox">
+                </div>
+              </div>
+              <div class="col-6 form-group navGroup" style="position: relative">
+                <label for="sortBy">Sort By :&nbsp;</label>
+                <select id="sortBy" class="form-control pr-4"></select>
+                <i class="fas fa-chevron-up up" id="sortChevron" style="position: absolute; right: 20px; top: 39px"></i>
+              </div>
+            </div>
+            <div class="row flex-row px-4 pb-3 dateChoice" style="display: none;">
+              <h6 class="dropdown-header">Choose a date option...</h6>
+              <div class="col-12 form-group navGroup">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="radioDateSelect" id="radioRange" value="Range" checked>
+                  <label class="form-check-label" for="radioRange">Date-Range</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="radioDateSelect" id="radioYear" value="Year">
+                  <label class="form-check-label" for="radioYear">Date-Year</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="radioDateSelect" id="radioMonth" value="Month">
+                  <label class="form-check-label" for="radioMonth">Date-Year-Month</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="radioDateSelect" id="radioWeek" value="Week">
+                  <label class="form-check-label" for="radioWeek">Date-Year-Week</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="radioDateSelect" id="radioDay" value="Day">
+                  <label class="form-check-label" for="radioDay">Date-Year-Month-Day</label>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown-divider"></div>
+            <h6 class="text-center mb-1 searchTypeInfo">Searching ( ALL ) By [ Text - Space Separated ]</h6>
+          </div>
+        </div>
+      </div>
+      <button class="btn shadow btn-outline-secondary sideBarRTog mx-3 px-4" id="profileBtn" type="button"><i class="fas fa-user-circle"></i></button>
+    </div>
+  </div>
+</nav>
+
+<div>
+
+</div>

@@ -1,0 +1,44 @@
+<!--Start FORM Container-->
+<form id="my-form">
+  <div class="row shadow pb-3">
+    <div class="text-center col-12">
+      <p class="lead shadow-sm m-0" id="MainTitle">DATASAFE ver.5 Client Database System</p>
+      <div class="row shadow-sm d-flex justify-content-around">
+        <div class="col-auto d-flex">
+          <div class="form-floating mt-0">
+            <input readonly type="text" name="DocumentID" class="form-control shadow searchKey sortKey" value="0" placeholder="DocumentID" title="Goto a Specific Document Number, If it Exists, and is within the current Tag Selection and/or Query!" id="DocumentID" autocomplete="off">
+            <label for="DocumentID">Document ID</label>
+          </div>
+        </div>
+        <div class="col-auto shadow d-flex align-self-center">
+          <div class="form-check tagBox">
+            <input type="checkbox" class="form-check-input Tag" name="Tag" id="Tag">
+            <label class="form-check-label" for="Tag">: Tag &nbsp; </label>
+          </div>
+          <div>
+            | <i class="fas fa-unlock-alt lock-indicator text-success lck"></i> |
+          </div>
+        </div>
+        <div class="col-auto d-flex align-self-center">
+            <label for="EditedOn">Edited On :</label>
+            <input type="datetime-local" id="EditedOn" title="Edited On" readonly class="form-control-plaintext searchKey sortKey">
+        </div>
+        <div class="col-auto lockCtrl">
+          <div class="form-floating mt-0">
+            <select class="form-select Status shadow searchKey sortKey" id="Status" aria-label="Status">
+              <option selected>Choose...</option>
+              <option value="Active">Active</option>
+              <option value="Inactive">Inactive</option>
+              <option value="Pending">Pending</option>
+              <option value="Archived">Archived</option>
+              <option value="For Deletion">For Deletion</option>
+            </select>
+            <label for="Status">Status</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <include class="lockCtrl" DS-Template="./html/DS-Tabs.html"></include>
+</form>
+<!--End FORM Container-->

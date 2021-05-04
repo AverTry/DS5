@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>DataSafe ver.5</title>
+		<link rel="stylesheet" href="./offline/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./offline/font/css/all.min.css">
+		<link rel="stylesheet" href="./css/DS-Styles.css">
+		<link rel="stylesheet" href="./css/DS-SideBar.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<script src="./offline/js/bootstrap.min.js" defer></script>
+		<script src="./js/DS-Initialise.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" defer></script>		
+	</head>
+
+	<body>
+		<div class="flexBack" style="display: flex; height: 100vh;">
+			<contents>
+				<include DS-Template="./html/DS-NavBar1st.html"></include>
+				<main-db>
+					<include DS-Template="./html/DS-SideBarLeft.html"></include>
+					<include DS-Template="./html/DS-Form.html"></include>
+					<include DS-Template="./html/DS-SideBarRight.html"></include>
+				</main-db>	
+				<include DS-Template="./html/DS-NavBar2nd.html"></include>
+			</contents>	
+			<include DS-Template="./html/DS-TableList.html"></include>
+		</div>
+	</body>
+
+</html>

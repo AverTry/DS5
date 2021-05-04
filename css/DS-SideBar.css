@@ -1,0 +1,211 @@
+/*
+    SIDEBAR
+*/
+
+::-webkit-scrollbar {
+	width: 0 !important;
+	scrollbar-width: none;
+}
+
+.sidebar #who {
+    margin-top: 10px;
+    padding: 7px 0px;
+    margin: 9px 39px 0px;
+}
+
+.sidebar .proWel,
+.sidebar .proWelDS {
+	font-size: 1.2rem;
+}
+
+.sidebar #uLev,
+.sidebar #uLevDS {
+	margin-top: -17px;
+	margin-bottom: -12px;
+	font-size: 0.9rem;
+}
+
+.sidebar .uEd {
+    padding: 12px;
+    margin: -12px;
+	padding-bottom: 6px;
+}
+
+.sidebar a,
+.sidebar a:hover,
+.sidebar a:focus {
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.sidebar .navbar {
+    border: none;
+    border-radius: 0;
+}
+
+.sidebar .accordion-button,
+.sidebar .accordion-button:focus,
+.sidebar .navbar-btn {
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+
+.sidebar .line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.sidebar {
+    position: fixed;
+    width: 350px;
+    z-index: 999;
+    transition: all 0.3s;
+    overflow-y: scroll;
+    padding-bottom: 5rem;
+}
+
+.sideBarL {
+	left: -350px;
+}
+
+.sideBarL.active {
+    left: 0;
+}
+
+.sideBarR {
+	right: -350px;
+}
+
+.sideBarR.active {
+    right: 0;
+}
+
+.sidebar, .sidebar .overlay {
+	top: 58px;
+    bottom: 60px;
+}
+
+.sideBarL #dismiss {
+    right: 10px;
+}
+
+.sideBarR #dismiss {
+    left: 10px;
+}
+
+.sidebar #dismiss {
+	top: 5px;
+    width: 35px;
+    height: 56px;
+    line-height: 35px;
+    text-align: center;
+    position: absolute;
+	border-radius: .25rem;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.sidebar #dismiss:hover {
+    color: #7386D5;
+	border-radius: .25rem;
+}
+
+i.fas.fa-arrow-right.sbye,
+i.fas.fa-arrow-left.sbye {
+	margin-top: 20px !important;
+}
+
+.sidebar .overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+/*    height: 100vh;*/
+    z-index: 700;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.sidebar .overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+.sideBarL .sidebar-header {
+	text-align: center;
+}
+
+.sideBarR .sidebar-header {
+	text-align: center;
+}
+
+.sidebar .sidebar-header {
+    padding: 12px 10px 1px 12px;
+	margin-top: 4px;
+    height: 56px;
+	border-radius: .25rem;
+}
+
+.sidebar ul p {
+    padding: 10px;
+    margin-top: 0;
+    margin-bottom: -20px;
+}
+
+.sidebar a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.sidebar .dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.sidebar ul.CTAs {
+    padding: 8px;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 75%;
+}
+
+.sidebar .list-group-item {
+    padding: 0.7rem 0.2rem;
+    margin-bottom: 0px;
+}
+
+.sidebar .accordion-item {
+    margin: 5px;
+}
+
+.sidebar .sbye {
+    opacity: .5;
+}
+
+.sidebar button {
+    color: var(--color-text-light);
+}
+
+.sidebar ul.CTAs:hover {
+    background-color: var(--form-input-border-color);
+}
+
+.sidebar ul.CTAs a{
+    color: var(--color-text-light);
+}
+
+.sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: var(--color-background-lighter) 1px solid;
+}

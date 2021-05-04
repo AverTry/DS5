@@ -1,0 +1,56 @@
+
+// MongoDB Request Tests
+
+GET http://localhost:3000/clients?limit=1&find={"Prefix":"Prof"}&sort=-RecordNo&page=4
+
+###
+
+GET http://localhost:3000/clients?limit=10 // total is 1000
+
+###
+
+GET http://localhost:3000/clients?page=3
+
+###
+
+GET http://localhost:3000/clients?find={"AccCreated": {$month": '$AccountCreated'}}
+
+###
+
+GET http://localhost:3000/clients?find={"AccCreated": {$month": '$AccountCreated'}}
+
+###
+
+// Create Client with Default Values, taken from Schema.
+POST http://localhost:3000/clients/create
+
+###
+
+POST http://localhost:3000/clients/create
+content-type: application/json
+
+{
+    "Status" : "Active",
+    "Prefix": "Mr",
+    "FirstName": "Fred",
+    "LastName": "Flintstone",
+    "HouseNo": "Rock",
+    "Street": "Bolder Ave",
+    "City": "Quarryville",
+    "County": "DinoLand",
+    "PostCode": "0987654bvcdrty",
+    "Country": "Flat Earth",
+    "Comments" : "Hey Hey Hey, Barney", 
+    "LastUpdated" : "2020-08-31T22:29:06.000+0000", 
+    "AccountCreated" : "2020-04-30T16:39:00.000+0000", 
+    "LastMeeting" : "2020-04-28T12:13:00.000+0000", 
+    "NextMeeting" : "2020-08-31T22:29:00.000+0000", 
+    "BusinessLine" : "447432434432", 
+    "HomePhone" : "45678976765876540", 
+    "MobilePhone" : "23454764766765430", 
+    "WebSite" : "https://www.kafuffle.net", 
+    "Email" : "87587@fuffle.net", 
+    "Facebook" : "www.facebook/wilmer"
+}
+
+###

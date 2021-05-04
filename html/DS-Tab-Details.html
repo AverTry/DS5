@@ -1,0 +1,143 @@
+<div class="row">
+  <div class="col-8">
+    <div class="container-fluid shadow ctrlPanel">
+      <div id="LeftColumnTitle" class="shadow-sm titleCol font-weight-bolder">
+        Client Address And Detail Information
+        <br />
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <div class="form-floating">
+            <select id="Prefix" class="form-select searchKey sortKey" placeholder="MyPlaceHolder" aria-label="Floating label select example" autocomplete="off">
+              <option selected>Choose...</option>
+              <option value="Mr">Mr</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Ms">Ms</option>
+              <option value="Miss">Miss</option>
+              <option value="Dr">Dr</option>
+              <option value="Sir">Sir</option>
+              <option value="Lady">Lady</option>
+              <option value="Prof">Prof</option>
+              <option value="Pastor">Pastor</option>
+            </select>
+            <label for="Prefix">Prefix</label>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="form-floating">
+            <input type="text" class="form-control searchKey sortKey" id="FirstName" placeholder="FirstName" autocomplete="off" />
+            <label for="FirstName" class="form-label">First Name :</label>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="form-floating">
+            <input type="text" class="form-control searchKey sortKey" id="LastName" placeholder="LastName" autocomplete="off" />
+            <label for="LastName" class="form-label">Last Name :</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <div class="form-floating">
+            <input type="text" class="form-control searchKey sortKey" id="HouseNo" placeholder="HouseNo" autocomplete="off" />
+            <label for="HouseNo" class="form-label">House No. :</label>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="form-floating">
+            <input type="text" class="form-control searchKey sortKey" id="Street" placeholder="Street" autocomplete="off" />
+            <label for="Street" class="form-label">Street :</label>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-floating">
+            <input type="text" class="form-control searchKey sortKey" id="City" placeholder="City" autocomplete="off" />
+            <label for="City" class="form-label">City :</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="form-floating">
+            <input type="text" class="form-control searchKey sortKey" id="County" placeholder="County" autocomplete="off" />
+            <label for="County" class="form-label">County :</label>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-floating">
+            <input type="text" class="form-control searchKey sortKey" id="PostCode" placeholder="Post Code" autocomplete="off" />
+            <label for="PostCode">Post Code :</label>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-floating">
+            <input type="text" class="form-control searchKey sortKey" id="Country" placeholder="Country" autocomplete="off" />
+            <label for="Country">Country :</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8">
+          <div class="form-floating">
+            <textarea class="form-control searchKey" style="resize: none" placeholder="Comments" id="Comments"></textarea>
+            <label for="Comments" class="float-right expandComments">Comments : &nbsp;</label>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-floating">
+            <input type="date" class="form-control searchKey sortKey" id="CreatedOn" autocomplete="off" placeholder="Created On" />
+            <label for="CreatedOn" class="date">Created On :</label>
+          </div>
+          <div class="form-floating">
+            <input type="datetime-local" class="form-control searchKey sortKey" id="LastMeeting" min="2000-01-01T00:00" max="2060-01-01T00:00"
+            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" value="1970-12-08T15:43:00" autocomplete="off" placeholder="Last Meeting Held On" />
+            <label for="LastMeeting" class="date">Last Meeting :</label>
+          </div>
+          <div class="form-floating">
+            <input type="datetime-local" class="form-control searchKey sortKey" id="NextMeeting" min="2000-01-01T00:00" max="2060-01-01T00:00"
+            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" value="1970-12-08T15:43:00" autocomplete="off" placeholder="Next Meeting Is On" />
+            <label for=" NextMeeting" class="date">Next Meeting :</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="container-fluid shadow ctrlPanel">
+      <div id="RightColumnTitle" class="shadow-sm titleCol font-weight-bolder">
+        Client Contact Information
+        <br />
+      </div>
+      <div class="row">
+        <div class="col-xl-12 col-12 col-md-6">
+          <div class="form-floating">
+            <input type="tel" class="form-control searchKey sortKey" id="BusinessLine" autocomplete="off" placeholder="On" />
+            <label for="BusinessLine">Business Line</label>
+          </div>
+          <div class="form-floating">
+            <input type="tel" class="form-control searchKey sortKey" id="HomePhone" autocomplete="off" placeholder="On" />
+            <label for="HomePhone">Home Phone</label>
+          </div>
+          <div class="form-floating">
+            <input type="tel" class="form-control searchKey sortKey" id="MobilePhone" autocomplete="off" placeholder="On" />
+            <label for="MobilePhone">Mobile Phone</label>
+          </div>
+        </div>
+        <div class="col-xl-12 col-12 col-md-6">
+          <div class="form-floating">
+            <input type="email" class="form-control searchKey sortKey" id="Email" autocomplete="off" placeholder="On" />
+            <label for="Email">Email</label>
+          </div>
+          <div class="form-floating">
+            <input type="url" class="form-control searchKey sortKey" id="WebSite" autocomplete="off" placeholder="On" />
+            <label for="WebSite">Web Site</label>
+          </div>
+          <div class="form-floating">
+            <input type="url" class="form-control searchKey sortKey" id="Facebook" autocomplete="off" placeholder="On" />
+            <label for="FaceBook">FaceBook</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

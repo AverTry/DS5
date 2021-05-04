@@ -1,0 +1,457 @@
+:root {
+    /* font-family: 'Gotham Rounded'; */
+    font-size: 18px;
+    --bodyFG: hsla(208, 100%, 97%, 0.7);
+    --color-base-hue: 205;
+    --color-base-sat: 56%;
+    --color-danger-hue-offset: 10;
+    --color-danger-hue: calc(var(--color-base-hue) - var(--color-danger-hue-offset));
+    --color-background-dark: hsl(var(--color-base-hue), var(--color-base-sat), 14%);
+    --color-background-light: hsl(var(--color-base-hue), var(--color-base-sat), 16%);
+    --color-background-lighter: hsl(var(--color-base-hue), var(--color-base-sat), 24%);
+    --color-text-light: hsl(var(--color-base-hue), var(--color-base-sat), 87%);
+    --color-text-dark: hsl(var(--color-base-hue), var(--color-base-sat), 23%);
+    --form-label-font-size: 1.2rem;
+    --form-input-background-color: hsl(var(--color-base-hue), var(--color-base-sat), 31%);
+    --form-input-border-color: hsl(var(--color-base-hue), var(--color-base-sat), 50%);
+    --form-input-border-color-light: hsl(var(--color-base-hue), var(--color-base-sat), 80%);
+}
+
+@font-face {
+	font-family: 'Numans';
+	src: local('Numans'), local('Numans-Regular'), url('../offline/font/Numans-Regular.ttf') format('truetype');
+}
+
+html,
+body {
+    /* height: 100vh; */
+    background: linear-gradient(to top, var(--color-background-light), var(--color-background-lighter));
+}
+
+nav {
+    background: linear-gradient(var(--color-background-dark), var(--color-background-light));
+}
+
+::-webkit-scrollbar {
+    width: 0 !important;
+    scrollbar-width: none !important;
+}
+
+* {
+    color: var(--bodyFG) !important;
+}
+
+contents {
+	/* display: none; */
+	margin: auto;
+}
+
+.dropdown-menu-dark {
+    background: linear-gradient(var(--color-background-light), var(--color-background-lighter));
+}
+
+#my-form .form-floating {
+    margin-top: 1rem;
+}
+
+.sidebar .accordion-body .form-floating:not(:nth-child(1)) {
+    margin-top: 1rem;
+}
+
+.nav-link.active {
+    border-bottom-color: transparent !important;
+}
+
+.tab-content {
+    min-width: 1133px;
+    max-width: 1133px;
+    max-height: 556px;
+    min-height: 556px;
+}
+
+.row {
+    --bs-gutter-x: 1rem;
+}
+
+#my-form {
+    width: 100%;
+    max-width: 1200px;
+    padding: 15px;
+    margin: auto;
+    border-radius: 1rem;
+    background: linear-gradient(var(--color-background-dark), var(--color-background-light));
+}
+
+.ctrlPanel {
+    background: linear-gradient(var(--color-background-light), var(--color-background-lighter));
+    border-radius: 0.5rem;
+    padding-bottom: 15px;
+}
+
+textarea#Comments {
+    height: 231px;
+}
+
+.titleCol {
+    margin: 1rem 0 0 0 !important;
+    text-align: center;
+}
+
+.form-select:disabled,
+.form-control:disabled,
+.form-control[readonly] {
+    background-color: var(--form-input-background-color) !important;
+    color: var(--color-text-light);
+    opacity: 1;
+}
+
+.form-control[readonly] {
+    border: 1px solid var(--form-input-border-color) !important;
+    color: var(--color-text-light);
+}
+
+.form-control.is-invalid, .was-validated .form-control:invalid {
+    padding-right: .7rem;
+    background-position: right calc(.015em + .1875rem) top .2rem;
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed),
+.card {
+    background-color: inherit;
+    color: inherit;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active,
+.form-select, li.list-group-item, ul.list-unstyled.CTAs,
+textarea, .form-select:focus, .form-control:focus,
+.form-control, .form-check-input, .form-check-input:focus {
+    color: var(--bodyFG);
+    border: 1px solid var(--form-input-border-color);
+    background-color: var(--color-background-lighter);
+}
+
+.form-select:focus,
+.form-control:focus,
+.form-check-input:focus:not(#searchByBox) {
+    box-shadow: 0 0 0 0.04rem var(--form-input-border-color-light);
+}
+
+.nav-tabs {
+    border-bottom: 1px solid var(--form-input-border-color);
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: var(--form-input-border-color);
+}
+
+.lead {
+    font-weight: 500;
+}
+
+.input-group-text {
+    background-color: transparent;
+    border: 1px solid var(--form-input-border-color);
+}
+
+span.input-group-text {
+    width: 41px !important;
+}
+
+input#DocumentID {
+    max-width: 8rem;
+}
+
+input#DocumentID::before {
+    content: "Updated"
+}
+
+input#EditedOn {
+    max-width: 10.8rem;
+    padding: 0;
+    margin: 0;
+    margin-left: 7px;
+}
+
+input#EditedOn:focus {
+    border: none;
+    outline: none;
+}
+
+select#searchYear, select#searchMonth, select#searchWeek, select#searchDay {
+    padding-right: .75rem;
+}
+
+.btn,
+.btn-sm {
+    background: var(--form-input-background-color);
+    border: 1px solid var(--form-input-border-color) ;
+}
+
+.btn:hover,
+.btn-sm:hover {
+    background: var(--form-input-border-color);
+}
+
+.btn.fa:hover {
+    color: var(--bodyFG);
+}
+
+.btn-check:active+.btn-outline-info, .btn-check:checked+.btn-outline-info, .btn-outline-info.active, .btn-outline-info.dropdown-toggle.show, .btn-outline-info:active {
+    background: var(--form-input-border-color);
+}
+
+.btn:active,
+.btn:focus {
+    box-shadow: none;
+}
+
+/* BootStrap5 error fix */
+.form-select.is-invalid, .was-validated .form-select:invalid {
+    padding-right: inherit;
+    background-position: right 0.75rem center,center right 0.75rem;
+}
+
+/* Missing Lable on focus when combining Floating input & Group-text appending */
+.form-floating>label {
+    pointer-events:none;
+    z-index: 3;
+}
+
+span.input-group-text {
+    border-top-right-radius: .25rem !important;
+    border-bottom-right-radius: .25rem !important;
+}
+
+/* Color fix on svg */
+.accordion-button::after,
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f0f8ffb3'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* Skewed image fix on floating required errors */
+.form-floating>.form-select {
+    padding-bottom: 0.425rem;
+}
+
+/* Element Grouping - some have a thicker border */
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    margin-left: -2px;
+}
+
+/* ------End Bootstap beta 1 fix------------------------------------------------------------- */
+
+.modal-body {
+    color: var(--bodyFG);
+    border: 1px solid var(--form-input-border-color);
+    background-color: var(--color-background-lighter);
+}
+
+.modal-header, .modal-footer {
+    color: var(--bodyFG);
+    border: 1px solid var(--form-input-border-color);
+    background-color: var(--color-background-lighter);
+}
+
+button#profileBtn {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+/* -------------------------------------------------------------- */
+
+.up {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+}
+
+.down {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+/* My Switch Selector */
+
+#searchByBox {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+
+.form-switch .form-check-input {
+    width: 1.5em;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+.form-check-input:checked {
+    background-color: transparent;
+    border-color:var(--form-input-border-color);
+}
+
+.form-switch .form-check-input {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e");
+}
+
+#searchByBox.form-check-input {
+    height: 0.7em;
+}
+
+#searchLabelType {
+    height: 1.6rem;
+    width: 34rem;
+    position: absolute;
+    top: 2.3rem;
+    right: 6rem;
+    z-index: 100;
+    background-color: var(--color-background-lighter);
+    border: var(--form-input-border-color);
+    opacity: 0.5;
+    max-width: fit-content;
+}
+
+#searchLabelType:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* End MySwitch Selector */
+
+/* .form-group>label,
+.checkbox>label {
+    position: relative
+}
+
+.form-group.required>label:before,
+.checkbox.required>label:before {
+    content: "*";
+    position: absolute;
+    top: -1px;
+    right: -10px;
+    color: red;
+}
+
+#editForm {
+    font-size: 12px;
+    font-weight: bolder;
+    background-color: hsl(var(--color-danger-hue), 30%, 50%);
+    color: var(--bodyFG);
+}
+
+#editForm:hover {
+    background-color: hsl(var(--color-danger-hue), 30%, 40%);
+}
+
+
+svg.bi.bi-bootstrap {
+    margin-bottom: -14px;
+}
+
+.error-message {
+    color: hsl(var(--color-danger-hue), 100%, 50%);
+}
+
+select#Prefix {
+    height: 42px;
+    width: 100%;
+    border-radius: 0.25rem;
+    padding: 6px 12px;
+}
+
+select#Prefix:disabled {
+    color: var(--color-text-light);
+    border: 1px solid var(--form-input-border-color);
+    background-color: var(--form-input-background-color);
+    opacity: 1;
+}
+
+textarea#Comments::parent {
+    height: 253.5px;
+}
+
+textarea#Comments:disabled {
+    color: var(--color-text-light);
+    border: 1px solid var(--form-input-border-color);
+    background-color: var(--form-input-background-color);
+    opacity: 1;
+}
+
+@media (min-width: 450px) {
+    .expandComments::after {
+        content: "[ Toggle 'Ctrl-e' to expand ]"
+    }
+}
+
+@media (max-width: 1600px) {
+    .hide {
+        display: none;
+    }
+
+    #my-form {
+    margin-top: 60px;
+}
+}
+
+@media (max-width: 1199px) {
+    .titleCol {
+        margin: 2rem 0 0 0 !important;
+    }
+
+    #my-form {
+        margin-bottom: 5rem;
+    }
+} 
+
+span.input-group-text.justify-content-center.ellipsisBtn {
+    background-color: var(--form-input-background-color) !important;
+    border: 1px solid var(--form-input-border-color) !important;
+    color: var(--color-text-light);
+    padding: 0.38rem 0rem;    
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+label {
+    float: left;
+}
+
+.customForm label {
+    padding-top: 5px;
+    margin-top: 10px;
+}
+
+.navGroup {
+    display: flex;
+    align-items: center;
+}  */
+
+/* .search-bar {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    color: bisque;
+    font-size: inherit;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+    border-left: none;
+    border-radius: 0.25rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 1px solid var(--form-input-border-color);
+    height: 42.5px;
+    background-color: hsl(var(--color-danger-hue), 30%, 50%);
+}
+
+.search-btn:hover {
+    background-color: hsl(var(--color-danger-hue), 30%, 40%);
+} */

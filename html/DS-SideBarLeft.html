@@ -1,0 +1,250 @@
+<div class="wrapper">
+  <!-- Sidebar  -->
+  <nav class="shadow sidebar sideBarL ">
+    <div id="dismiss" class="closeSBL">
+      <i class="fas fa-arrow-left sbye"></i>
+    </div>
+
+    <div class="sidebar-header">
+      <h4>Administration</h4>
+    </div>
+    <div id="who">
+      <p class="proWelDS" style="text-transform:capitalize; text-align: center;">Welcome</p>
+      <p id="uLevDS" style="text-align: center;">Access Level</p>
+    </div>
+    <ul class="list-unstyled components">
+      <!-- ----------------------------------------------------------------------------------------------------- -->
+      <div class="accordion" id="accordionLeft">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOneL">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneL" aria-expanded="false" aria-controls="collapseOneL">
+              Staff Information
+            </button>
+          </h2>
+          <div id="collapseOneL" class="accordion-collapse collapse" aria-labelledby="headingOneL" data-bs-parent="#accordionLeft">
+            <div class="accordion-body">
+              <div class="form-floating input-group">
+                <select class="form-select" id="userInfo" placeholder="User Information">
+                  <option selected>Joe Bloggs</option>
+                  <option value="Sir lancealot">Sir lancealot</option>
+                  <option value="Mr Man">Mr Man</option>
+                </select>
+                <span class="input-group-text justify-content-center"><i class="fas fa-user"></i></span>
+                <label for="userInfo">User Information</label>
+              </div>
+              <div class="form-floating input-group">
+                <input type="text" class="form-control" id="beginWork" value="Data Unavailable..?" placeholder="Started Work At : " readonly />
+                <label for="beginWork">Started Work At : </label>
+                <span class="input-group-text justify-content-center"><i class="fas fa-info"></i></span>
+              </div>
+              <div class="form-floating input-group">
+                <input type="text" class="form-control" id="uLastLogin" value="Data Unavailable..?" placeholder="Last Logged In : " readonly />
+                <label for="uLastLogin">Last Logged In : </label>
+                <span class="input-group-text justify-content-center"><i class="fas fa-sign-in-alt"></i></span>
+              </div>
+              <div class="form-floating input-group">
+                <input type="text" class="form-control" id="uIP" value="Data Unavailable..?" placeholder="From IP Address : " readonly />
+                <label for="uIP">From IP Address : </label>
+                <span class="input-group-text justify-content-center"><i class="fas fa-map-marker-alt"></i></span>
+              </div>
+              <div class="form-floating input-group">
+                <input type="text" class="form-control" id="uAccess" value="Data Unavailable..?" placeholder="Has Access Level : " readonly />
+                <label for="uAccess">Has Access Level : </label>
+                <span class="input-group-text justify-content-center"><i class="fas fa-layer-group"></i></span>
+              </div>
+              <div class="form-floating input-group">
+                <input type="text" class="form-control" id="atLock" value="Data Unavailable..?" placeholder="Admin Tag Lock is : " readonly />
+                <label for="atLock">Admin Tag Lock is : </label>
+                <span class="input-group-text justify-content-center"><i class="fas fa-lock"></i></span>
+              </div>
+              <div class="form-floating input-group">
+                <input type="text" class="form-control" id="uMail" value="Data Unavailable..?" placeholder="Contact Email Is : " readonly />
+                <label for="uMail">Contact Email Is : </label>
+                <span class="input-group-text justify-content-center"><i class="fas fa-at"></i></span>
+              </div>
+              <div class="form-floating input-group">
+                <input type="text" class="form-control" id="uMobile" value="Data Unavailable..?" placeholder="Contact MobileNo Is : " readonly />
+                <label for="uMobile">Contact MobileNo Is : </label>
+                <span class="input-group-text justify-content-center"><i class="fas fa-mobile-alt"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwoL">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoL" aria-expanded="false" aria-controls="collapseTwoL">
+              Staff Password Reset
+            </button>
+          </h2>
+          <div id="collapseTwoL" class="accordion-collapse collapse" aria-labelledby="headingTwoL" data-bs-parent="#accordionLeft">
+            <div class="accordion-body">
+              <div class="form-floating input-group">
+                <select class="form-select" id="uPassReset" placeholder="Reset Staff Member Password">
+                  <option selected>Joe Bloggs</option>
+                  <option value="Sir lancealot">Sir lancealot</option>
+                  <option value="Mr Man">Mr Man</option>
+                </select>
+                <span class="input-group-text justify-content-center"><i class="fas fa-user"></i></span>
+                <label for="uPassReset">Reset Staff Member Password</label>
+              </div>
+              <div class="form-floating input-group">
+                <input type="text" class="form-control ue" id="rpass" name="rpass" placeholder="Enter New Password" />
+                <label for="rpass">Enter New Password</label>
+                <span class="input-group-text justify-content-center"><i class="fas fa-key"></i></span>
+              </div>
+              <div class="m-4">
+                <div class="shadow row mx-auto">
+                  <button class="upasSub btn btn-outline-secondary" type='button'><i class="fas fa-user-cog"></i>&nbsp;&nbsp; Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThreeL">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeL" aria-expanded="false" aria-controls="collapseThreeL">
+              Create Staff Account
+            </button>
+          </h2>
+          <div id="collapseThreeL" class="accordion-collapse collapse" aria-labelledby="headingThreeL" data-bs-parent="#accordionLeft">
+            <div class="accordion-body">
+              <div class="uEd">
+                <form autocomplete="none" id="newStaff">
+                  <!--				<input name="username" type="text" class="form-control dummy hidden" style="display: none;" id="username">-->
+                  <!--				<input name="password" type="password" class="form-control dummy hidden" style="display: none;" id="password">-->
+                  <div class="form-floating input-group">
+                    <input type="text" class="form-control ue" id="sfname" name="sfname" placeholder="First Name" autocomplete="off" />
+                    <label for="sfname">First Name</label>
+                    <span class="input-group-text justify-content-center"><i class="fas fa-user"></i></span>
+                  </div>
+                  <div class="form-floating input-group">
+                    <input type="text" class="form-control ue" id="slname" name="slname" placeholder="Last Name" autocomplete="off" />
+                    <label for="slname">Last Name</label>
+                    <span class="input-group-text justify-content-center"><i class="fas fa-user"></i></span>
+                  </div>
+                  <div class="form-floating input-group">
+                    <input type="text" class="form-control ue" id="suname" name="suname" placeholder="User Name" autocomplete="off" />
+                    <label for="suname">User Name</label>
+                    <span class="input-group-text justify-content-center"><i class="fas fa-user"></i></span>
+                  </div>
+                  <div class="form-floating input-group">
+                    <input type="text" class="form-control ue" id="semail" name="semail" placeholder="Email Address" autocomplete="off">
+                    <label for="semail">Email Address</label>
+                    <span class="input-group-text justify-content-center"><i class="fas fa-at"></i></span>
+                  </div>
+                  <div class="form-floating input-group">
+                    <input type="text" class="form-control ue" id="smobile" name="smobile" placeholder="Mobile PhoneNo" autocomplete="off" />
+                    <label for="smobile">Mobile PhoneNo</label>
+                    <span class="input-group-text justify-content-center"><i class="fas fa-mobile-alt"></i></span>
+                  </div>
+                  <div class="form-floating input-group">
+                    <select class="form-select" id="uLevelSet" placeholder="Change Staff Member's Access Level">
+                      <option selected>Staff Access Level...</option>
+                      <option value="2" class="at3 at2">Director</option>
+                      <option value="3" class="at3">Manager</option>
+                      <option value="4">Read.Write.Delete</option>
+                      <option value="5">Read.Write</option>
+                      <option value="6">Create New</option>
+                      <option value="7">Read Only</option>
+                    </select>
+                    <span class="input-group-text justify-content-center"><i class="fas fa-user-lock"></i></span>
+                    <label for="uLevelSet">Change Staff Access Level</label>
+                  </div>
+                  <div class="form-floating input-group">
+                    <input type="text" class="form-control ue" id="spass" name="spass" placeholder="Staff Password" autocomplete="off" />
+                    <label for="spass">Staff Password</label>
+                    <span class="input-group-text justify-content-center"><i class="fas fa-key"></i></span>
+                  </div>
+                </form>
+                <div class="m-4">
+                  <div class="shadow row mx-auto">
+                    <button class="btn btn-outline-secondary" id="createStaffMember" type='button'><i class="fas fa-user-cog"></i>&nbsp;&nbsp; Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFourL">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourL" aria-expanded="false" aria-controls="collapseFourL">
+              Remove Staff account
+            </button>
+          </h2>
+          <div id="collapseFourL" class="accordion-collapse collapse" aria-labelledby="headingFourL" data-bs-parent="#accordionLeft">
+            <div class="accordion-body">
+              <div class="form-floating input-group">
+                <select class="form-select" id="uRemAcc" placeholder="Staff member to remove?">
+                  <option selected>Joe Bloggs</option>
+                  <option value="Sir lancealot">Sir lancealot</option>
+                  <option value="Mr Man">Mr Man</option>
+                </select>
+                <span class="input-group-text justify-content-center"><i class="fas fa-user"></i></span>
+                <label for="uRemAcc">Staff member to remove?</label>
+              </div>
+              <div class="m-4">
+                <div class="shadow row mx-auto">
+                  <button class="uremSub btn btn-outline-secondary" type='button'><i class="fas fa-user-cog"></i>&nbsp;&nbsp; Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFiveL">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveL" aria-expanded="false" aria-controls="collapseFiveL">
+              DataSafe Settings
+            </button>
+          </h2>
+          <div id="collapseFiveL" class="accordion-collapse collapse" aria-labelledby="headingFiveL" data-bs-parent="#accordionLeft">
+            <div class="accordion-body">
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      ScreenSaver - logout
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <p style="text-align: left; ">Saver Start : 1 Min &nbsp;</p>
+                    <p style="text-align: left; ">Saver Password : True &nbsp;</p>
+                    <p style="text-align: left; ">Logout After? : 60 Min &nbsp;</p>
+                    <p style="text-align: left; ">Force Logout? : 20:00 &nbsp;</p>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Backup Settings
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <p style="text-align: left; ">MySQL-Dump : Enabled &nbsp;</p>
+                    <p style="text-align: left; ">Retention : Every 5 Min &nbsp;</p>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Other Settings
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <p style="text-align: left; ">Allow Theme : True &nbsp;</p>
+                    <p style="text-align: left; ">Acc. Date Edit : False &nbsp;</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+    <!-- --------------------------------------------------------------------------------------------------------- -->
+    <div class="mx-5 my-3">
+      <div class="shadow row mx-auto">
+        <button class="btn btn-outline-secondary closeSBL" type='button'>CLOSE</button>
+      </div>
+    </div>
+  </nav>
+</div>

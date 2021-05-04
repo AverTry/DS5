@@ -1,0 +1,186 @@
+<div class="wrapper">
+  <!-- Sidebar  -->
+  <nav class="shadow sidebar sideBarR">
+    <div id="dismiss" class="closeSBR">
+      <i class="fas fa-arrow-right sbye"></i>
+    </div>
+    <div class="sidebar-header">
+      <h4>Staff Profile</h4>
+    </div>
+    <div id="who">
+      <p class="proWel" style="text-align: center;">Welcome</p>
+      <p id="uLev" style="text-align: center;">Access Level</p>
+    </div>
+    <ul class="list-unstyled components">
+      <!-- --------------------------------------------------------------------------------------------------------------- -->
+      <div class="accordion" id="accordionRight">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOneR">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneR" aria-expanded="true" aria-controls="collapseOneR">
+              Log-In/Out Times
+            </button>
+          </h2>
+          <div id="collapseOneR" class="accordion-collapse collapse show" aria-labelledby="headingOneR" data-bs-parent="#accordionRight">
+            <div class="accordion-body">
+              <div class="form-floating">
+                <input type="text" class="form-control" value="20/2/21 08:35:00" id="sWork" value="Absent from work today" placeholder="Started Work Today At :" readonly />
+                <label for="Country">Started Work Today At :</label>
+              </div>
+              <div class="form-floating">
+                <input type="text" class="form-control" value="20/2/21 08:35:00" id="lIn" value="Data Unavailable..?" placeholder="Currently Logged In Since :" readonly />
+                <label for="Country">Currently Logged In Since :</label>
+              </div>
+              <div class="form-floating">
+                <input type="text" class="form-control" value="20/2/21 08:35:00" id="pIn" value="No Data Found..?" placeholder="You Previously Logged In On :" readonly />
+                <label for="Country">You Previously Logged In On :</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwoR">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoR" aria-expanded="false" aria-controls="collapseTwoR">
+              Profile Edit
+            </button>
+          </h2>
+          <div id="collapseTwoR" class="accordion-collapse collapse" aria-labelledby="headingTwoR" data-bs-parent="#accordionRight">
+            <div class="accordion-body">
+              <ul class="list-unstyled">
+                <form autocomplete="none" id="proForm">
+                  <div class="form-floating input-group">
+                    <input type="text" class="form-control ue" value="User" id="uname" placeholder="User Name" autocomplete="off" />
+                    <span class="input-group-text justify-content-center"><i class="fas fa-user"></i></span>
+                    <label for="uname">User Name</label>
+                  </div>
+
+                  <div class="form-floating input-group">
+                    <input name="uemail" type="text" class="form-control ue" id="uemail" placeholder="New email" autocomplete="off">
+                    <span class="input-group-text justify-content-center"><i class="fas fa-at"></i></span>
+                    <label for="uname">New email</label>
+
+                  </div>
+                  <div class="form-floating input-group">
+                    <input name="umobile" type="text" class="form-control ue" id="umobile" placeholder="Mobile PhoneNo" autocomplete="off">
+                    <span class="input-group-text justify-content-center"><i class="fas fa-mobile-alt"></i></span>
+                    <label for="uname">Mobile PhoneNo</label>
+
+                  </div>
+                  <div class="form-floating input-group">
+                    <input name="newpass" type="text" class="form-control ue i" for="see1" id="pass1" placeholder="Enter New Password" autocomplete="off">
+                    <span class="input-group-text justify-content-center c" for="pass1" id="see1"><i class="fas fa-key"></i></span>
+                    <label for="uname">Enter New Password</label>
+
+                  </div>
+                  <div class="form-floating input-group">
+                    <input name="conpass" type="text" class="form-control ue i" for="see2" id="pass2" placeholder="Confirm New Pass?" autocomplete="off">
+                    <span class="input-group-text justify-content-center c" for="pass2" id="see2"><i class="fas fa-key"></i></span>
+                    <label for="uname">Confirm New Pass?</label>
+
+                  </div>
+                  <p class="mt-3 text-center">Password Required for Changes:</p>
+                  <div class="form-floating input-group">
+                    <input name="curpass" type="text" class="form-control ue i" for="see0" id="pass0" placeholder="Enter Current Password" autocomplete="off">
+                    <span class="input-group-text justify-content-center c" for="pass0" id="see0"><i class="fas fa-key"></i></span>
+                    <label for="uname">Enter Current Password</label>
+                  </div>
+                </form>
+                <div class="m-4">
+                  <div class="shadow row mx-auto">
+                    <button class="btn btn-outline-secondary" id="proEdit" data-placement="left" type='button'><i class="fas fa-user-cog"></i>&nbsp;&nbsp; Submit</button>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThreeR">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeR" aria-expanded="false" aria-controls="collapseThreeR">
+              Style Preferences
+            </button>
+          </h2>
+          <div id="collapseThreeR" class="accordion-collapse collapse" aria-labelledby="headingThreeR" data-bs-parent="#accordionRight">
+            <div class="accordion-body">
+              <p style="text-align: center; ">Theme Select &nbsp;</p>
+              <div class="form-floating input-group">
+                <select class="form-select" id="colorChanger" placeholder="Choose a Background Color"></select>
+                <span class="input-group-text justify-content-center"><i class="fas fa-paint-roller"></i></span>
+                <label for="colorChanger">Choose a Theme</label>
+              </div>
+              <div class="form-floating input-group">
+                <select class="form-select" id="colorChanger" placeholder="Choose a Background Color">
+                  <option value="Tomato">Tomato</option>
+                  <option value="coral">Coral</option>
+                  <option value="salmon">Salmon</option>
+                  <option value="darksalmon">Darksalmon</option>
+                  <option value="burlywood">Burlywood</option>
+                  <option value="gold">Gold</option>
+                  <option value="darkgoldenrod">Darkgoldenrod</option>
+                  <option value="orange">Orange</option>
+                  <option value="darkorange">Darkorange</option>
+                  <option value="orangered">Orangered</option>
+                  <option value="firebrick">Firebrick</option>
+                  <option value="olive">Olive</option>
+                  <option value="olivedrab">Olivedrab</option>
+                  <option value="palegreen">Palegreen</option>
+                  <option value="forestgreen">Forestgreen</option>
+                  <option value="Aqua">Aqua</option>
+                  <option value="aquamarine">Aquamarine</option>
+                  <option value="teal">Teal</option>
+                  <option value="cornflowerblue">Cornflowerblue</option>
+                  <option value="deepskyblue">Deepskyblue</option>
+                  <option value="midnightblue">Midnightblue</option>
+                  <option value="blueviolet">Blueviolet</option>
+                  <option value="violet">Violet</option>
+                  <option value="darkgrey">Grey</option>
+                  <option value="#34282c">Charcoal</option>
+                  <option value="#2b1b17">Midnight</option>
+                  <option value="#25383c">Dusk</option>
+                  <option value="#2c3539">Gunmetal</option>
+                  <option value="#3D3C3A">Iridium</option>
+                  <option value="black">Black</option>
+                  <option value="transparent">Transparent</option>
+                </select>
+                <span class="input-group-text justify-content-center"><i class="fas fa-palette"></i></span>
+                <label for="colorChanger">Choose a Background Color</label>
+              </div>
+              <!-- </div> -->
+
+              <div class="form-floating input-group">
+                <select class="form-select" id="imageChanger" placeholder="Choose a Background Image"></select>
+                <span class="input-group-text justify-content-center"><i class="fas fa-image"></i></span>
+                <label for="imageChanger">Choose a Background Image</label>
+              </div>
+              <div class="input-group form-group mt-3">
+                <div class="shadow mx-auto">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="blur" id="blur">
+                    <label class="custom-control-label" for="blur">: Blur Background Images.</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------ -->
+    <div class="mx-5 my-3">
+      <div class="shadow row mx-auto">
+        <button class="btn btn-outline-secondary closeSBR" type='button' onClick="location.href = '/'">LOGOUT &nbsp;<i class="fas fa-sign-out-alt"></i></button>
+      </div>
+    </div>
+    <div class="mx-5 my-3">
+      <div class="shadow row mx-auto">
+        <button class="btn btn-outline-secondary closeSBR" type='button'>CLOSE</button>
+      </div>
+    </div>
+  </nav>
+</div>
+<style>
+  .showpass {
+    font-family: 'Numans' !important;
+    font-size: 16px !important;
+    color: red !important;
+  }
+</style>
