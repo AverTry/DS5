@@ -296,7 +296,7 @@ runQuery = (pageNo = 1) => {
   // return log('Params',Params())
   sortValue = getSortOrder()  
   let find = `alltxt=${firstQuery}&params=${Params()}&sort=${sortValue}&page=${pageNo}`
-  let query = `https://ds5.avertry.repl.co/clients?${find}`
+  let query = `https://ds5-1.avertry.repl.co/clients?${find}`
   fetch(query)
   .then(response => {
     if ( response.status === 204) {
@@ -326,7 +326,7 @@ last.addEventListener('click', () => runQuery(totalPages))
 let myModalEl = document.getElementById('list')
 myModalEl.addEventListener('show.bs.modal', (event) => {
   console.time('1000 Records Fetch')
-  fetch('https://ds5.avertry.repl.co/clients?limit=20')
+  fetch('https://ds5-1.avertry.repl.co/clients?limit=20')
   .then(response => response.json())
   .then(data => {
     if (!data.docs[0].documents.length) return
