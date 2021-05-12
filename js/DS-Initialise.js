@@ -27,7 +27,8 @@ finishedLoadingDom.then(() => {
     './js/DS-Paginate.js',
     './js/DS-Settings.js',
     './js/DS-SideBar.js',
-    './js/DS-Populate.js'
+    './js/DS-Populate.js',
+    './js/DS-Charts.js'
   ].forEach((src) => {
     const script = document.createElement('script')
     script.src = src

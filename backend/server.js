@@ -26,15 +26,14 @@ function paginatedResults(model) {
     let dates = false
     let sort = req.query.sort
     let byText = req.query.alltxt
+    let page = parseInt(req.query.page) || 1
     const user = req.query.user || 'Users1'
-    const page = parseInt(req.query.page) || 1
     const limit = parseInt(req.query.limit) || 1
     const startIndex = (page - 1) * limit
     const endIndex = page * limit
     const result = {}
-    typeof sort === 'undefined' ? sort = { DocumentID: 1 } : sort = JSON.parse( sort )
-    typeof byText === 'undefined' || typeof byText === 'null' || byText === '' 
-      ? byText = { $match: {} } : byText = { $match: { $text: { $search: byText } } }
+    Boolean(sort) ? sort = JSON.parse( sort ) : sort = { DocumentID: 1 }
+    Boolean(byText) ? byText = { $match: { $text: { $search: byText } } } : byText = { $match: {} }
     const joinTags = {'$lookup': {'from': 'Tag','localField': 'DocumentID','foreignField': '_id','as':'Tag'}}
     const addTags = {'$set': {'Tag' : { $arrayElemAt: [ '$Tag.' + user, 0 ] }}}
     const facet = { $facet: { totalDocs: [{ $count: 'count' }], documents: [{ $project: { _id: 0 }},{ $sort: sort },{ $skip: startIndex },{ $limit: limit }]}}
@@ -133,7 +132,7 @@ function apiRes(model) {
   return async (req, res, next) => {
     let sort = req.query.sort
     let byText = req.query.alltxt || {}
-    const page = parseInt(req.query.page) || 1
+    let page = parseInt(req.query.page) || 1
     const limit = parseInt(req.query.limit) || 10
     const startIndex = (page - 1) * limit
     const endIndex = page * limit
@@ -146,9 +145,9 @@ function apiRes(model) {
       if (result === undefined) return res.status(204).send()
       res.apiRes = result
       let total = 1000
-      startIndex > 0 ? result.prev = { page: page - 1 } : result.prev = {page}
+      startIndex > 0 ? result.prev = { page: page-- } : result.prev = {page}
       result.currentPage = {page}
-      endIndex < total ? result.next = { page: page + 1 } : result.next = {page}
+      endIndex < total ? result.next = { page: page++ } : result.next = {page}
 
       console.log(result);
 

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../offline/js/chart.min.js"></script>
+  <script src="../js/DS-Charts.js" defer></script>
+  <title>Document</title>
+  <style>
+    .charts {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cone {
+      margin: 1rem;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .chart1 {
+      background: conic-gradient(red, orange, yellow, green, blue);
+    }
+
+    .chart2 {
+      /* background: conic-gradient(from 0.25turn at 50% 30%, #f69d3c, 10deg, #3f87a6, 350deg, #ebf8e1); */
+      background: conic-gradient(red 0deg, orange 50deg, yellow 80deg, green 170deg, blue 360deg);
+    }
+
+    .chart3 {
+      background: conic-gradient(hsl(360, 100%, 50%),
+          hsl(315, 100%, 50%),
+          hsl(270, 100%, 50%),
+          hsl(225, 100%, 50%),
+          hsl(180, 100%, 50%),
+          hsl(135, 100%, 50%),
+          hsl(90, 100%, 50%),
+          hsl(45, 100%, 50%),
+          hsl(0, 100%, 50%));
+    }
+
+    .chart4 {
+      background: conic-gradient(red 6deg, orange 6deg 18deg, yellow 18deg 45deg,
+          green 45deg 110deg, blue 110deg 200deg, purple 200deg);
+    }
+
+    .chart5 {
+      background: conic-gradient(red .25turn,
+          blue .25turn .7turn,
+          green .7turn);
+      /* background: conic-gradient(#fff 10deg, #000 0.25turn 0.5turn, #fff 4rad .5rad, #000 300grad 360grad, #fff); */
+    }
+
+    .chart-container {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .myChart {
+      max-height: 300px;
+      max-width: 300px;
+    }
+
+  </style>  
+</head>
+<body>
+
+  <div class="charts">
+    <div class="cone chart1"></div>
+    <div class="cone chart2"></div>
+    <div class="cone chart3"></div>
+    <div class="cone chart4"></div>
+    <div class="cone chart5"></div>
+  </div>
+
+
+  <div class="chart-container">
+    <canvas class="myChart" id="myChart"></canvas>
+    <canvas class="myChart" id="myChart2"></canvas>
+  </div>
+  
+</body>
+</html>
