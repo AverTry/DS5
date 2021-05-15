@@ -296,8 +296,8 @@ runQuery = (pageNo = 1) => {
   // return log('Params',Params())
   sortValue = getSortOrder()  
   let find = `alltxt=${firstQuery}&params=${Params()}&sort=${sortValue}&page=${pageNo}`
-  let query = `http://localhost:3000/clients?${find}`
-  // let query = `https://ds5-1.avertry.repl.co/clients?${find}`
+//   let query = `http://localhost:3000/clients?${find}`
+  let query = `https://ds5-1.avertry.repl.co/clients?${find}`
   fetch(query)
   .then(response => {
     if ( response.status === 204) {
